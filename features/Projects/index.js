@@ -138,7 +138,7 @@ export default function Projects() {
                 }}>
                 <motion.div
                   layoutId={id}
-                  className="relative w-full aspect-16-10  block rounded overflow-hidden transition-transform duration-300">
+                  className="relative w-full aspect-16-10  block rounded overflow-hidden transition-transform duration-300 group-hover:transform group-hover:scale-105">
                   <Image
                     src={photoSrc}
                     className="object-cover"
