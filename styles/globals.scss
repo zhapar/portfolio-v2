@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#__next {
+  display: flex;
+  width: 100%;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 0;
+  @apply min-h-screen text-white bg-gray-80;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  @apply text-2xl sm:text-3xl font-primary font-bold leading-4xl;
+}
+
+h2 {
+  @apply text-2xl font-primary font-bold leading-3xl;
+}
+
+h3 {
+  @apply text-xl font-primary font-bold leading-2xl;
+}
+
+h4 {
+  @apply text-lg font-primary font-bold leading-xl;
+}
+
+h5 {
+  @apply text-base font-primary font-bold leading-lg;
+}
+
+h6 {
+  @apply text-sm font-primary font-bold leading-sm;
+}
+
+p {
+  @apply font-roboto text-base leading-xl;
+
+  &.body-lg {
+    @apply text-base sm:text-lg leading-xl;
+  }
+
+  &.body-sm{
+    @apply text-sm leading-base;
+  }
+}
+
+.container {
+  @apply  max-w-5xl mx-auto;
+}
+
+.aspect-16-10 {
+  aspect-ratio: 16 / 10;
+}
