@@ -1,4 +1,5 @@
 import { contacts } from 'features/Navigation'
+import ExternalLink from 'icons/ExternalLink'
 
 export default function Footer() {
   return (
@@ -15,6 +16,13 @@ export default function Footer() {
         ))}
       </div>
       <h6 className="mt-6">© 2021 Zhapar Manas uulu</h6>
+      <a
+        target="_blank"
+        href="https://github.com/zhapar/portfolio-v2"
+        className="text-sm mt-2 underline flex items-center">
+        <ExternalLink className="w-4 mr-2" />
+        Code
+      </a>
     </div>
   )
 }

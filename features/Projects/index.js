@@ -18,8 +18,8 @@ const projects = [
       'Find new anime that you want to watch by searching with name, year, format and season or you search by categories and genres (there is about 267 genres). In addition, read information about an anime and watch trailer',
     ],
     technologies: ['React', 'Next js', 'Tailwind', 'AniApi', 'React Query'],
-    githubLink: '#',
-    demoLink: '#',
+    githubLink: 'https://github.com/zhapar/ani',
+    demoLink: 'https://ani-ten.vercel.app/',
   },
   {
     id: 'furrow',
@@ -29,8 +29,8 @@ const projects = [
       'This a clone of furrow studio website from awwwards. Furrow is an integrated, full-service creative studio offering video production, creative development, and post-production services.',
     ],
     technologies: ['React', 'Next js', 'Tailwind', 'Framer Motion'],
-    githubLink: '#',
-    demoLink: '#',
+    githubLink: 'https://github.com/zhapar/furrow',
+    demoLink: 'https://furrow.vercel.app/',
   },
   {
     id: 'netfilm',
@@ -47,8 +47,8 @@ const projects = [
       'TMDB API',
       'Sass',
     ],
-    githubLink: '#',
-    demoLink: '#',
+    githubLink: 'https://github.com/zhapar/netfilm',
+    demoLink: 'https://filmcloud.netlify.app/',
   },
   {
     id: 'food',
@@ -59,8 +59,8 @@ const projects = [
       'Restaurant employee can see order reports, statistics of orders, most ordered foods and most type of orders. In addition, employee can add, edit or delete food of the restaurant.',
     ],
     technologies: ['React', 'Next js', 'Tailwind', 'Nest js', 'React Query'],
-    githubLink: '#',
-    demoLink: '#',
+    githubLink: 'https://github.com/zhapar/food',
+    demoLink: 'https://restaurant-foods.netlify.app/',
   },
   {
     id: 'palettes',
@@ -77,8 +77,8 @@ const projects = [
       'Array move',
       'Sass',
     ],
-    githubLink: '#',
-    demoLink: '#',
+    githubLink: 'https://github.com/zhapar/colors-app',
+    demoLink: 'https://colorspalettes.netlify.app/',
   },
   {
     id: 'clothing',
@@ -95,8 +95,8 @@ const projects = [
       'Firebase',
       'Sass',
     ],
-    githubLink: '#',
-    demoLink: '#',
+    githubLink: 'https://github.com/zhapar/clothing',
+    demoLink: 'https://hhk-clothing.herokuapp.com/',
   },
 ]
 
@@ -124,7 +124,7 @@ export default function Projects() {
               <div
                 key={id}
                 className={cn(
-                  'col-span-1 sm:col-span-1 w-full cursor-pointer group',
+                  'col-span-3 sm:col-span-1 w-full cursor-pointer group',
                   active?.id === id && 'z-20'
                 )}
                 onClick={() => {
@@ -167,10 +167,10 @@ export default function Projects() {
                 setOpen(false)
                 setActive({})
               }}></div>
-            <div className="container outline-none flex items-center z-10 pointer-events-none">
+            <div className="container outline-none flex flex-col md:flex-row items-center z-10 pointer-events-none">
               <motion.div
                 layoutId={active.id}
-                className="relative aspect-16-10 w-1/2 block rounded overflow-hidden pointer-events-auto">
+                className="relative aspect-16-10 w-5/6 md:w-1/2 block rounded overflow-hidden pointer-events-auto">
                 <Image
                   src={active.photoSrc}
                   className="object-cover"
@@ -186,7 +186,7 @@ export default function Projects() {
                   x: 300,
                 }}
                 transition={{ type: 'just', ease: 'easeInOut', duration: 0.5 }}
-                className="max-w-md w-full bg-gray-80 flex flex-col -ml-20 z-10 py-5 px-10 rounded pointer-events-auto">
+                className="max-w-md w-full bg-gray-80 flex flex-col -mt-10 md:mt-0 md:-ml-20 z-10 py-5 px-10 rounded pointer-events-auto">
                 <h4>{active.name}</h4>
                 {active.description.map((paragraph, id) => (
                   <p key={id} className="body-sm mt-3">

@@ -27,7 +27,7 @@ export const links = [
   },
   {
     title: 'Resume',
-    link: '#resume',
+    link: '/resume/Zhapar Manas uulu - CV.pdf',
     Icon: Download,
   },
 ]
